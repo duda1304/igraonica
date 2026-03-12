@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/88648f0af4.js"></script>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap-social-gh-pages/bootstrap-social-gh-pages/bootstrap-social.css">
+    <link rel="stylesheet" href="igraonica.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BQGH1K5R8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-9BQGH1K5R8');
+    </script>
+</head>
+
+<body>
+    <section>
+        <label class="balloon b1"><span></span></label>
+    </section>
+
+    <header class="bg-image" 
+            style="background-image: url(Shutterstock_2214363739.jpg);
+                    height: 32.5vh;"> 
+        <div class="container1">
+            <div class="overflow-hidden">
+                <h1 class="header drop-in text-center text-white fw-bold display-1">VILA TREŠNJICA</h1>
+            </div>
+            <div class="overflow-hidden">
+                <p class="drop-in-2 text-center text-white fw-bold h3">
+                Proslava rođendana</p>
+            </div>
+        </div>  
+        <div class="text-center d-flex flex-row flex-wrap justify-content-center align-items-center buttons-div">
+            <button type="button" class="btn btn1 button1 text-white m-1 custom-shadow bold" data-package="basic">OSNOVNO</button>
+            <button type="button" class="btn btn1 button2 text-white m-1" data-package="package1">PAKET 1</button>
+            <button type="button" class="btn btn1 button3 text-white m-1" data-package="package2">PAKET 2</button>
+            <button type="button" class="btn btn1 button4 text-white m-1" data-package="package3">ČAROBNA AVANTURA</button>
+        </div>   
+    </header>
+      
+    <main class="colorLiberty">
+        <div class="container-lg pt-2">
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-4 rounded mt-5  mb-sm-5 m-1 box1 text-white p-4 small scale-up-left custom-shadow shadow p-3 kolona">
+                    <h3 class="text-center mb-3" id="package-name">OSNOVNO</h3>
+                    <p id="price" class="text-center bg-warning me-5 ms-5 rounded fw-bold h3 border border-2 border-white">100€</p>
+                    <div id="package" class="mt-5">
+                        <p>NEOGRANIČENI BROJ DJECE</p>
+                        <p>2 SATA ANIMACIJE</p>
+                        <p>2 ANIMATORA</p>
+                        <p>GRICKALICE I SOKOVI</p>
+                        <p>FOTOGRAFIJE</p>
+                        <p>SVJEĆICE</p>
+                        <p>BUBBLE MACHINE</p>
+                    </div>
+                    <!-- <p style="display: none;" id="message">* odaberi besplatno do 5 artikala iz posebne ponude</p> -->
+                </div>
+                <div class="col-10 col-sm-4 rounded mt-3 mt-sm-5  mb-5 m-1 box2 text-white p-4 small scale-up-right custom-shadow shadow p-3">
+                    <h3 class="text-center mb-4">POSEBNA PONUDA</h3>
+                    <p style="display: none;" id="message">* odaberi besplatno do 5 artikala iz posebne ponude</p>
+                    <form class="mb-3">
+                        <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="15" id="add1" name="add1">
+                                <label class="form-check-label" for="add1">               
+                                    Pinjata
+                                </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="15" id="add2" name="add2">
+                            <label class="form-check-label" for="add2">
+                                Pizza
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="15" id="add3" name="add3">
+                            <label class="form-check-label" for="add3">               
+                                Tema (Harry Potter, sport, zvijezde...)
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="5" id="add4" name="add4">
+                            <label class="form-check-label" for="add4">
+                                Šampanjac
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="5" id="add5" name="add5">
+                            <label class="form-check-label" for="add5">               
+                                Poklončići za ekipu 
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="15" id="add6" name="add6">
+                            <label class="form-check-label" for="add6">
+                                Torta
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="15" id="add7" name="add7">
+                            <label class="form-check-label" for="add7">               
+                                Face Painting
+                            </label>
+                        </div>
+                            <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="5" id="add8" name="add8">
+                            <label class="form-check-label" for="add8">               
+                                Fontana svjećica na torti
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="15" id="add9" name="add9">
+                            <label class="form-check-label" for="add9">               
+                                Korištenje jedne prostorije za roditelje
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="15" id="add10" name="add10">
+                            <label class="form-check-label" for="add10">               
+                                Pola sata više zabave
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="10" id="add11" name="add11">
+                            <label class="form-check-label" for="add11">               
+                                Pokrivka za tortu
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="5" id="add12" name="add12">
+                            <label class="form-check-label" for="add12">               
+                                2 isprintane fotke na foto papiru
+                            </label>
+                        </div>
+                        <div class="form-check mb-2 d-flex flex-column d-none" id="add13">
+                            <label class="label mb-3" for="quantity">               
+                                Dodatno djece:
+                            </label>
+                            <div class="number-input d-flex flex-row align-items-center">
+                                <button type="button" class="m-2" onclick="if (this.parentNode.querySelector('input[type=number]').value !== '0') {this.parentNode.querySelector('input[type=number]').stepDown(); adjustPrice('minus');}" ></button>
+                                <input class="quantity" min="0" name="quantity" value="0" type="number">
+                                <button type="button" class="m-2 plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); adjustPrice('plus');"></button>
+                            </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="text-center fs-4 fw-bold text-white shadow p-3">OSTALA DOGAĐANJA</div>
+            <div class="row">
+                <div class="col badge rounded-pill e1 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                    Plesne radionice
+                </div>
+                <div class="col badge rounded-pill e2 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                    Učimo zajedno (od 5€/45min)
+                </div>
+                <div class="col badge rounded-pill e3 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                    Najam za proslave 50€
+                </div>
+                <div class="col badge rounded-pill e4 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                    Rekreativna Joga
+                </div>
+                <div class="col badge rounded-pill e5 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                    Radionice za potencijalno nadarenu djecu
+                </div>
+            </div>
+        </div>
+    </main>  
+
+    <footer class="footercolor">
+        <div class="container-sm text-center footercolor">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-white small">
+                    <h3 class="text-left mb-3">VILA TREŠNJICA</h3>
+                    <p class="mb-0 h5">DOBOJSKA ULICA 36c</p>
+                    <p class="h5 mb-3">10 000 ZAGREB</p>
+                    <a class="text-white fw-bold h5" href="tel:0917951845">091 795 1845</a></p>
+                </div>
+                <div class="col-lg-4 mt-3 mt-lg-0">
+                    <a href="https://www.instagram.com/vilatresnjica/" class="btn btn-social-icon btn-instagram">
+                        <span class="fa fa-instagram"></span>
+                    </a>
+                    <a href="https://www.facebook.com/vilatresnjicarodendani" class="btn btn-social-icon btn-facebook">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                    <a href="mailto: vilatresnjica@gmail.com" class="btn btn-social-icon btn-google">
+                        <span class="fa fa-envelope"></span>
+                    </a>
+                </div>
+                <div class="col-lg-4 p-10 mt-5 mt-lg-0">
+                    <iframe class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.6975600458272!2d15.950916651435621!3d45.79728651907369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d694ddf21ba7%3A0x34a91209464e1ab6!2sDobojska%20ul.%2036%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1673085408016!5m2!1shr!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./functions.js"></script>
+</body>
+</html>
+</button>
