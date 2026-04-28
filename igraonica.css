@@ -200,6 +200,24 @@ html {
     font-size: 1.1rem !important;
 }
 
+@media (min-width: 768px) {
+    .drop-in-2 {
+        font-size: 1.35rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .drop-in-2 {
+        font-size: 1.55rem !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .drop-in-2 {
+        font-size: 1.72rem !important;
+    }
+}
+
 @keyframes drop-in {
     from {
         opacity: 0;
@@ -445,8 +463,58 @@ html {
     border: 0;
 }
 
-.footer-main-col .btn-social-icon {
-    margin-right: 0.35rem;
+.footer-main-col p.h5,
+.footer-main-col a.h5 {
+    font-size: 1.03rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-link {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.social-link i {
+    font-size: 1.05rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.social-link.social-instagram:hover,
+.social-link.social-instagram:focus {
+    background-color: #e4405f;
+    border-color: #e4405f;
+}
+
+.social-link.social-facebook:hover,
+.social-link.social-facebook:focus {
+    background-color: #1877f2;
+    border-color: #1877f2;
+}
+
+.social-link.social-email:hover,
+.social-link.social-email:focus {
+    background-color: #f7ca36;
+    border-color: #f7ca36;
+    color: #2d2d2d;
 }
 
 @media (min-width: 992px) {
@@ -767,26 +835,27 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .btn1 {
-        font-size: 0.8rem !important;
-        width: calc(50% - 0.5rem) !important;
-        max-width: none;
-        min-width: 0;
+        font-size: 0.94rem !important;
+        width: calc(47% - 0.5rem) !important;
+        max-width: 190px;
+        min-width: 145px;
+        white-space: nowrap;
         margin: 0.25rem !important;
     }
 
     #package-name,
     .box2 h3 {
-        font-size: 1.15rem !important;
+        font-size: 1.3rem !important;
     }
 
     #package p,
     .box2 .form-check-label {
-        font-size: 0.9rem !important;
+        font-size: 1.02rem !important;
     }
 
     .location-switcher .btn-location {
-        font-size: 0.78rem;
-        padding: 0.3rem 0.45rem;
+        font-size: 0.96rem;
+        padding: 0.38rem 0.58rem;
     }
 
     main .container-lg.pt-2 {
