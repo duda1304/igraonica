@@ -1,11 +1,4 @@
 (() => {
-    const $ = window.jQuery;
-
-    if (!$) {
-        console.error('jQuery is not loaded: functions.js requires jQuery.');
-        return;
-    }
-
     const locationData = {
         otona: {
             packageLabels: {
@@ -170,18 +163,11 @@
 
     function initLazyMaps() {
         const mapFrames = document.querySelectorAll('iframe[data-map-src]');
-
-        if (!mapFrames.length) {
-            return;
-        }
+        if (!mapFrames.length) return;
 
         const loadMap = (frame) => {
             const mapSrc = frame.getAttribute('data-map-src');
-
-            if (!mapSrc || frame.getAttribute('src')) {
-                return;
-            }
-
+            if (!mapSrc || frame.getAttribute('src')) return;
             frame.setAttribute('src', mapSrc);
         };
 
@@ -192,16 +178,11 @@
 
         const observer = new IntersectionObserver((entries, io) => {
             entries.forEach((entry) => {
-                if (!entry.isIntersecting) {
-                    return;
-                }
-
+                if (!entry.isIntersecting) return;
                 loadMap(entry.target);
                 io.unobserve(entry.target);
             });
-        }, {
-            rootMargin: '220px 0px'
-        });
+        }, { rootMargin: '220px 0px' });
 
         mapFrames.forEach((frame) => observer.observe(frame));
     }
@@ -210,86 +191,114 @@
         return locationData[activeLocation];
     }
 
-    function escapeHtml(text) {
-        return text
-            .replaceAll('&', '&amp;')
-            .replaceAll('<', '&lt;')
-            .replaceAll('>', '&gt;')
-            .replaceAll('"', '&quot;')
-            .replaceAll("'", '&#39;');
-    }
-
     function renderLocationButtons() {
-        $('.location-switcher button').removeClass('active-location bold');
-        $(`.location-switcher button[data-location="${activeLocation}"]`).addClass('active-location bold');
+        document.querySelectorAll('.location-switcher button').forEach((btn) => {
+            btn.classList.remove('active-location', 'bold');
+        });
+        const activeBtn = document.querySelector(`.location-switcher button[data-location="${activeLocation}"]`);
+        if (activeBtn) activeBtn.classList.add('active-location', 'bold');
     }
 
     function renderPackageButtons() {
         const data = getActiveData();
 
         packageOrder.forEach((key) => {
-            const $btn = $(`.buttons-div button[data-package="${key}"]`);
-            $btn.text(data.packageLabels[key]);
+            const btn = document.querySelector(`.buttons-div button[data-package="${key}"]`);
+            if (btn) btn.textContent = data.packageLabels[key];
         });
 
-        $('.buttons-div button').removeClass('bold');
-        $(`.buttons-div button[data-package="${activePackage}"]`).addClass('bold');
+        document.querySelectorAll('.buttons-div button').forEach((btn) => btn.classList.remove('bold'));
+        const activeBtn = document.querySelector(`.buttons-div button[data-package="${activePackage}"]`);
+        if (activeBtn) activeBtn.classList.add('bold');
     }
 
     function renderPackageContent() {
         const data = getActiveData();
         const packageText = data.packageLabels[activePackage];
 
-        $('#package-name-title').text(packageText).css('color', packageColors[activePackage]);
-        $('#package').empty();
+        const titleEl = document.getElementById('package-name-title');
+        if (titleEl) {
+            titleEl.textContent = packageText;
+            titleEl.style.color = packageColors[activePackage];
+        }
 
-        data.content[activePackage].forEach((item) => {
-            $('#package').append(`<p>${escapeHtml(item)}</p>`);
-        });
-
-        $('#package').parent().css('background-color', packageColors[activePackage]);
+        const packageEl = document.getElementById('package');
+        if (packageEl) {
+            packageEl.innerHTML = '';
+            data.content[activePackage].forEach((item) => {
+                const p = document.createElement('p');
+                p.textContent = item;
+                packageEl.appendChild(p);
+            });
+            packageEl.parentElement.style.backgroundColor = packageColors[activePackage];
+        }
     }
 
     function renderAddons() {
         const data = getActiveData();
-        const $form = $('#addons-form');
+        const form = document.getElementById('addons-form');
+        if (!form) return;
 
-        $form.empty();
+        form.innerHTML = '';
 
         data.addons.forEach((addon) => {
-            const html = `
-                <div class="form-check mb-2" data-addon-id="${addon.id}">
-                    <input class="form-check-input" type="checkbox" value="${addon.value}" id="${addon.id}" name="${addon.id}">
-                    <label class="form-check-label" for="${addon.id}">${escapeHtml(addon.label)}</label>
-                </div>
-            `;
-            $form.append(html);
+            const div = document.createElement('div');
+            div.className = 'form-check mb-2';
+            div.dataset.addonId = addon.id;
+
+            const input = document.createElement('input');
+            input.className = 'form-check-input';
+            input.type = 'checkbox';
+            input.value = addon.value;
+            input.id = addon.id;
+            input.name = addon.id;
+
+            const label = document.createElement('label');
+            label.className = 'form-check-label';
+            label.htmlFor = addon.id;
+            label.textContent = addon.label;
+
+            div.appendChild(input);
+            div.appendChild(label);
+            form.appendChild(div);
         });
 
         if (data.special.extraKidsPackage) {
-            const kidsHtml = `
-                <div class="form-check mb-2 d-flex flex-column d-none" id="extra-kids-block">
-                    <hr class="extra-kids-divider">
-                    <label class="label mb-2">Dodatno djece:</label>
-                    <div class="number-input d-flex flex-row align-items-center">
-                        <button type="button" class="m-2 child-minus"></button>
-                        <input class="quantity" min="0" value="0" type="number" readonly>
-                        <button type="button" class="m-2 plus child-plus"></button>
-                    </div>
+            const kidsDiv = document.createElement('div');
+            kidsDiv.className = 'form-check mb-2 d-flex flex-column d-none';
+            kidsDiv.id = 'extra-kids-block';
+            kidsDiv.innerHTML = `
+                <hr class="extra-kids-divider">
+                <label class="label mb-2">Dodatno djece:</label>
+                <div class="number-input d-flex flex-row align-items-center">
+                    <button type="button" class="m-2 child-minus"></button>
+                    <input class="quantity" min="0" value="0" type="number" readonly>
+                    <button type="button" class="m-2 plus child-plus"></button>
                 </div>
             `;
-            $form.append(kidsHtml);
+            form.appendChild(kidsDiv);
         }
     }
 
     function resetAddons() {
-        $('#addons-form input.form-check-input').prop('checked', false).prop('disabled', false);
-        $('#addons-form .form-check').removeClass('grow');
-        $('#message').hide().text('');
+        document.querySelectorAll('#addons-form input.form-check-input').forEach((input) => {
+            input.checked = false;
+            input.disabled = false;
+        });
+        document.querySelectorAll('#addons-form .form-check').forEach((el) => el.classList.remove('grow'));
+
+        const message = document.getElementById('message');
+        if (message) {
+            message.style.display = 'none';
+            message.textContent = '';
+        }
 
         extraKidsCount = 0;
-        $('#extra-kids-block input.quantity').val(0);
-        $('#extra-kids-block').addClass('d-none');
+        const quantityInput = document.querySelector('#extra-kids-block input.quantity');
+        if (quantityInput) quantityInput.value = 0;
+
+        const extraKidsBlock = document.getElementById('extra-kids-block');
+        if (extraKidsBlock) extraKidsBlock.classList.add('d-none');
     }
 
     function applySpecialPackageRules() {
@@ -297,20 +306,27 @@
         const special = data.special;
 
         if (special.freeItemsPackage === activePackage && special.freeItemsMessage) {
-            $('#message').text(special.freeItemsMessage).show().addClass('grow');
+            const message = document.getElementById('message');
+            if (message) {
+                message.textContent = special.freeItemsMessage;
+                message.style.display = '';
+                message.classList.add('grow');
+            }
         }
 
         if (special.packageDefaults[activePackage]) {
             special.packageDefaults[activePackage].forEach((id) => {
-                const $input = $(`#${id}`);
-                $input.prop('checked', true);
-                $input.prop('disabled', true);
-                $input.closest('.form-check').addClass('grow');
+                const input = document.getElementById(id);
+                if (!input) return;
+                input.checked = true;
+                input.disabled = true;
+                input.closest('.form-check').classList.add('grow');
             });
         }
 
         if (special.extraKidsPackage === activePackage) {
-            $('#extra-kids-block').removeClass('d-none');
+            const extraKidsBlock = document.getElementById('extra-kids-block');
+            if (extraKidsBlock) extraKidsBlock.classList.remove('d-none');
         }
     }
 
@@ -322,8 +338,8 @@
         const isFreeItemPackage = special.freeItemsPackage === activePackage;
 
         if (!isFreeItemPackage) {
-            $('#addons-form input.form-check-input:checked').each(function () {
-                price += parseInt($(this).val(), 10);
+            document.querySelectorAll('#addons-form input.form-check-input:checked').forEach((input) => {
+                price += parseInt(input.value, 10);
             });
         }
 
@@ -331,7 +347,8 @@
             price += extraKidsCount * special.extraKidStep;
         }
 
-        $('#price').html(`${price}€`);
+        const priceEl = document.getElementById('price');
+        if (priceEl) priceEl.textContent = `${price}€`;
     }
 
     function updateAllUI() {
@@ -343,55 +360,59 @@
         recalcPrice();
     }
 
-    $('.location-switcher button').on('click', function () {
-        const newLocation = $(this).data('location');
-        if (newLocation === activeLocation) {
-            return;
-        }
-
-        activeLocation = newLocation;
-        activePackage = 'basic';
-        renderAddons();
-        updateAllUI();
+    document.querySelectorAll('.location-switcher button').forEach((btn) => {
+        btn.addEventListener('click', function () {
+            const newLocation = this.dataset.location;
+            if (newLocation === activeLocation) return;
+            activeLocation = newLocation;
+            activePackage = 'basic';
+            renderAddons();
+            updateAllUI();
+        });
     });
 
-    $('.buttons-div button').on('click', function () {
-        activePackage = $(this).data('package');
-        updateAllUI();
+    document.querySelectorAll('.buttons-div button').forEach((btn) => {
+        btn.addEventListener('click', function () {
+            activePackage = this.dataset.package;
+            updateAllUI();
+        });
     });
 
-    $('#addons-form').on('change', 'input.form-check-input', function () {
+    const addonsForm = document.getElementById('addons-form');
+
+    addonsForm.addEventListener('change', function (e) {
+        if (!e.target.matches('input.form-check-input')) return;
+
         const data = getActiveData();
         const special = data.special;
         const isFreeItemPackage = special.freeItemsPackage === activePackage;
 
-        if (isFreeItemPackage && $(this).is(':checked')) {
-            const selectedCount = $('#addons-form input.form-check-input:checked').length;
+        if (isFreeItemPackage && e.target.checked) {
+            const selectedCount = document.querySelectorAll('#addons-form input.form-check-input:checked').length;
             if (selectedCount > special.freeItemsLimit) {
-                $(this).prop('checked', false);
-                $(this).closest('.form-check').removeClass('grow');
+                e.target.checked = false;
+                e.target.closest('.form-check').classList.remove('grow');
                 return;
             }
         }
 
-        $(this).closest('.form-check').toggleClass('grow', $(this).is(':checked'));
+        e.target.closest('.form-check').classList.toggle('grow', e.target.checked);
         recalcPrice();
     });
 
-    $('#addons-form').on('click', '.child-plus', function () {
-        extraKidsCount += 1;
-        $('#extra-kids-block input.quantity').val(extraKidsCount);
-        recalcPrice();
-    });
-
-    $('#addons-form').on('click', '.child-minus', function () {
-        if (extraKidsCount === 0) {
-            return;
+    addonsForm.addEventListener('click', function (e) {
+        if (e.target.matches('.child-plus')) {
+            extraKidsCount += 1;
+            const qty = document.querySelector('#extra-kids-block input.quantity');
+            if (qty) qty.value = extraKidsCount;
+            recalcPrice();
+        } else if (e.target.matches('.child-minus')) {
+            if (extraKidsCount === 0) return;
+            extraKidsCount -= 1;
+            const qty = document.querySelector('#extra-kids-block input.quantity');
+            if (qty) qty.value = extraKidsCount;
+            recalcPrice();
         }
-
-        extraKidsCount -= 1;
-        $('#extra-kids-block input.quantity').val(extraKidsCount);
-        recalcPrice();
     });
 
     initLazyMaps();

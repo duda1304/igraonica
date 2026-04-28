@@ -20,12 +20,12 @@
     <link rel="canonical" href="https://www.kaem-vilatresnjica.hr/">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png?v=20260428-1">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png?v=20260428-1">
-    <link rel="icon" type="image/webp" href="images/favicon.webp?v=20260428-1">
-    <link rel="shortcut icon" href="images/favicon.png?v=20260428-1">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260428-1">
-    <link rel="manifest" href="site.webmanifest?v=20260428-1">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png?v=20260428-4">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260428-4">
+    <link rel="icon" type="image/webp" href="images/favicon.webp?v=20260428-4">
+    <link rel="shortcut icon" href="images/favicon-32.png?v=20260428-4">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260428-4">
+    <link rel="manifest" href="site.webmanifest?v=20260428-4">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -46,7 +46,10 @@
 
     <!-- Theme color -->
     <meta name="theme-color" content="#349c34">
-    <link rel="preload" as="image" href="images/hero_image.webp?v=20260428-1" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero_image_mobile.webp?v=20260428-4" media="(max-width: 767px)"
+        type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero_image.webp?v=20260428-4" media="(min-width: 768px)"
+        type="image/webp" fetchpriority="high">
 
     <!-- Structured Data: LocalBusiness -->
     <script type="application/ld+json">
@@ -87,21 +90,125 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700;900&family=Mukta+Vaani:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="igraonica.css?v=20260428-1">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BQGH1K5R8"></script>
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700;900&family=Mukta+Vaani:wght@400;500;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link rel="preload" as="style"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    </noscript>
+    <link rel="preload" as="style"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    </noscript>
+    <style>
+        html,
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: #F7CA36;
+            font-family: "Mukta Vaani", "Segoe UI", sans-serif;
+        }
+
+        .bg-image {
+            position: relative;
+            height: 32.5vh;
+            overflow: hidden;
+            background-color: #d8b13c;
+        }
+
+        .hero-media,
+        .hero-media img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-media img {
+            object-fit: cover;
+            object-position: center 60%;
+        }
+
+        .container1 {
+            position: relative;
+            z-index: 1;
+            height: 30vh;
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+
+        .header {
+            margin: 0.25rem 0;
+            font-family: "Catamaran", sans-serif !important;
+            font-weight: 900 !important;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .location-switcher,
+        .buttons-div {
+            background-color: #f6f6f6;
+        }
+
+        @media (max-width: 575.98px) {
+            .bg-image {
+                height: 19.5vh;
+            }
+
+            .container1 {
+                height: 100%;
+            }
+        }
+    </style>
+    <link rel="preload" as="style" href="igraonica.css?v=20260428-4" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="igraonica.css?v=20260428-4">
+    </noscript>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-9BQGH1K5R8');
+        function loadAnalytics() {
+            if (window.__gaLoaded) {
+                return;
+            }
+
+            window.__gaLoaded = true;
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9BQGH1K5R8';
+            document.head.appendChild(script);
+
+            gtag('js', new Date());
+            gtag('config', 'G-9BQGH1K5R8');
+        }
+
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadAnalytics, { timeout: 3000 });
+        } else {
+            window.addEventListener('load', function () {
+                setTimeout(loadAnalytics, 1500);
+            }, { once: true });
+        }
     </script>
 </head>
 
@@ -110,7 +217,13 @@
         <label class="balloon b1"><span></span></label>
     </section>
 
-    <header class="bg-image" style="background-image: url(images/hero_image.webp?v=20260428-1);">
+    <header class="bg-image">
+        <picture class="hero-media" aria-hidden="true">
+            <source media="(max-width: 767px)" srcset="images/hero_image_mobile.webp?v=20260428-4" type="image/webp">
+            <source media="(max-width: 767px)" srcset="images/hero_image_mobile.jpg?v=20260428-4" type="image/jpeg">
+            <img src="images/hero_image.webp?v=20260428-4" alt="" fetchpriority="high" decoding="async" width="3168"
+                height="1344">
+        </picture>
         <div class="container1">
             <div class="overflow-hidden">
                 <h1 class="header drop-in text-center text-white fw-bold display-1">VILA TREŠNJICA</h1>
@@ -219,19 +332,19 @@
                 <!-- lokacija 1 = dobojska -->
                 <div class="col-6 col-sm-6 col-md-6 col-lg-4 mt-4 mt-lg-0 text-white footer-map-col">
                     <iframe class="rounded footer-map" title="Karta lokacije Dobojska 36c"
-                        data-map-src="https://maps.google.com/maps?q=Dobojska+ulica+36c,+Zagreb&t=k&z=18&output=embed"
+                        data-map-src="https://maps.google.com/maps?q=Dobojska+ulica+36c,+Zagreb&t=m&z=18&output=embed"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <!-- lokacija 2 = otona -->
                 <div class="col-6 col-sm-6 col-md-6 col-lg-4 mt-4 mt-lg-0 text-white footer-map-col">
                     <iframe class="rounded footer-map" title="Karta lokacije Otona Kucere 74"
-                        data-map-src="https://maps.google.com/maps?q=Ulica+Otona+Kucere+74,+Zagreb&t=k&z=18&output=embed"
+                        data-map-src="https://maps.google.com/maps?q=Ulica+Otona+Kucere+74,+Zagreb&t=m&z=18&output=embed"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </footer>
-    <script defer src="./functions.js?v=20260428-1"></script>
+    <script defer src="./functions.js?v=20260428-5"></script>
 </body>
 
 </html>
