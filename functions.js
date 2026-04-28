@@ -168,6 +168,44 @@
     let activePackage = 'basic';
     let extraKidsCount = 0;
 
+    function initLazyMaps() {
+        const mapFrames = document.querySelectorAll('iframe[data-map-src]');
+
+        if (!mapFrames.length) {
+            return;
+        }
+
+        const loadMap = (frame) => {
+            const mapSrc = frame.getAttribute('data-map-src');
+
+            if (!mapSrc || frame.getAttribute('src')) {
+                return;
+            }
+
+            frame.setAttribute('src', mapSrc);
+        };
+
+        if (!('IntersectionObserver' in window)) {
+            mapFrames.forEach(loadMap);
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries, io) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                loadMap(entry.target);
+                io.unobserve(entry.target);
+            });
+        }, {
+            rootMargin: '220px 0px'
+        });
+
+        mapFrames.forEach((frame) => observer.observe(frame));
+    }
+
     function getActiveData() {
         return locationData[activeLocation];
     }
@@ -356,6 +394,7 @@
         recalcPrice();
     });
 
+    initLazyMaps();
     renderAddons();
     updateAllUI();
 })();
