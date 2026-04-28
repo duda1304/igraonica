@@ -1,10 +1,83 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="hr">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Primary Meta Tags -->
+    <title>Vila Trešnjica - Organizacija dječjih rođendana i proslava | Zagreb</title>
+    <meta name="title" content="Vila Trešnjica - Organizacija dječjih rođendana i proslava | Zagreb">
+    <meta name="description"
+        content="Vila Trešnjica - organizacija rođendanskih proslava, najam prostora za dječje rođendane, radionice, udruge i sportske klubove. Dvije lokacije u Zagrebu: Dobojska 36c i Otona Kučere 74.">
+    <meta name="keywords"
+        content="dječji rođendani Zagreb, proslave Zagreb, najam prostora rođendan, igraonica Zagreb, animatori za rođendan, Vila Trešnjica, Dobojska, Otona Kučere">
+    <meta name="author" content="Vila Trešnjica">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Croatian">
+    <link rel="canonical" href="https://www.kaem-vilatresnjica.hr/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link rel="apple-touch-icon" href="favicon.webp">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kaem-vilatresnjica.hr/">
+    <meta property="og:title" content="Vila Trešnjica - Organizacija dječjih rođendana i proslava | Zagreb">
+    <meta property="og:description"
+        content="Organizacija rođendanskih proslava i najam prostora za dječje rođendane, radionice, udruge i sportske klubove. Dvije lokacije u Zagrebu.">
+    <meta property="og:image" content="hero_image.webp">
+    <meta property="og:locale" content="hr_HR">
+    <meta property="og:site_name" content="Vila Trešnjica">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vila Trešnjica - Organizacija dječjih rođendana i proslava | Zagreb">
+    <meta name="twitter:description"
+        content="Organizacija rođendanskih proslava i najam prostora za dječje rođendane, radionice, udruge i sportske klubove.">
+    <meta name="twitter:image" content="hero_image.webp">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#349c34">
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Vila Trešnjica",
+        "description": "Organizacija rođendanskih proslava, najam prostora za dječje rođendane, radionice, udruge i sportske klubove.",
+        "image": "hero_image.webp",
+        "url": "https://www.kaem-vilatresnjica.hr/",
+        "priceRange": "€€",
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "Dobojska ulica 36c",
+                "addressLocality": "Zagreb",
+                "addressCountry": "HR"
+            },
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "Ulica Otona Kučere 74",
+                "addressLocality": "Zagreb",
+                "addressCountry": "HR"
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700;900&family=Mukta+Vaani:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/88648f0af4.js"></script>
     <script src="./jquery-3.6.3.min.js"></script>
     <link rel="stylesheet" href="./bootstrap-social-gh-pages/bootstrap-social-gh-pages/bootstrap-social.css">
@@ -12,9 +85,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BQGH1K5R8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() {dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        
+
         gtag('config', 'G-9BQGH1K5R8');
     </script>
 </head>
@@ -24,184 +97,126 @@
         <label class="balloon b1"><span></span></label>
     </section>
 
-    <header class="bg-image" 
-            style="background-image: url(Shutterstock_2214363739.jpg);
-                    height: 32.5vh;"> 
+    <header class="bg-image" style="background-image: url(hero_image.webp);">
         <div class="container1">
             <div class="overflow-hidden">
                 <h1 class="header drop-in text-center text-white fw-bold display-1">VILA TREŠNJICA</h1>
             </div>
             <div class="overflow-hidden">
-                <p class="drop-in-2 text-center text-white fw-bold h3">
-                Proslava rođendana</p>
+                <p class="drop-in-2 text-center text-white fw-bold h3 pt-0 pt-md-5">
+                    Organizacija rođendanskih proslava, najam prostora za dječje rođendane, najam prostora za radionice,
+                    udruge i sportske klubove</p>
             </div>
-        </div>  
-        <div class="text-center d-flex flex-row flex-wrap justify-content-center align-items-center buttons-div">
-            <button type="button" class="btn btn1 button1 text-white m-1 custom-shadow bold" data-package="basic">OSNOVNO</button>
-            <button type="button" class="btn btn1 button2 text-white m-1" data-package="package1">PAKET 1</button>
-            <button type="button" class="btn btn1 button3 text-white m-1" data-package="package2">PAKET 2</button>
-            <button type="button" class="btn btn1 button4 text-white m-1" data-package="package3">ČAROBNA AVANTURA</button>
-        </div>   
+        </div>
     </header>
-      
+
+    <!-- lokacija 1 = dobojska, lokacija 2 = otona -->
+    <div class="location-switcher text-center d-flex flex-row flex-wrap justify-content-center align-items-center">
+        <button type="button" class="btn btn-location m-1 active-location bold" data-location="dobojska">Dobojska
+            36c</button>
+        <button type="button" class="btn btn-location m-1" data-location="otona">Otona Kučere 74</button>
+    </div>
+
+    <div class="text-center d-flex flex-row flex-wrap justify-content-center align-items-center buttons-div">
+        <button type="button" class="btn btn1 button1 text-white m-1 custom-shadow bold" data-package="basic">OSNOVNI
+            PAKET</button>
+        <button type="button" class="btn btn1 button2 text-white m-1 custom-shadow" data-package="package1">TEMATSKI
+            PAKET</button>
+        <button type="button" class="btn btn1 button3 text-white m-1 custom-shadow" data-package="package2">NAPUHANAC
+            PAKET</button>
+        <button type="button" class="btn btn1 button4 text-white m-1 custom-shadow" data-package="package3">MAGIC
+            PAKET</button>
+    </div>
+
     <main class="colorLiberty">
         <div class="container-lg pt-2">
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-4 rounded mt-5  mb-sm-5 m-1 box1 text-white p-4 small scale-up-left custom-shadow shadow p-3 kolona">
-                    <h3 class="text-center mb-3" id="package-name">OSNOVNO</h3>
-                    <p id="price" class="text-center bg-warning me-5 ms-5 rounded fw-bold h3 border border-2 border-white">100€</p>
-                    <div id="package" class="mt-5">
-                        <p>NEOGRANIČENI BROJ DJECE</p>
-                        <p>2 SATA ANIMACIJE</p>
-                        <p>2 ANIMATORA</p>
-                        <p>GRICKALICE I SOKOVI</p>
-                        <p>FOTOGRAFIJE</p>
-                        <p>SVJEĆICE</p>
-                        <p>BUBBLE MACHINE</p>
+                <div class="col-10 col-sm-5 col-lg-4 m-1">
+                    <h2 class="text-center package-title" id="package-name-title">OSNOVNI PAKET</h2>
+                    <div
+                        class="rounded mb-sm-5 box1 text-white p-4 small scale-up-left custom-shadow shadow p-3 kolona">
+                        <p class="text-center fw-bold mb-2" style="font-size: 0.95rem;">UKUPNA CIJENA:</p>
+                        <p id="price" class="text-center bg-warning me-5 ms-5 rounded fw-bold h3">
+                            170€
+                        </p>
+                        <div id="package" class="mt-3"></div>
                     </div>
-                    <!-- <p style="display: none;" id="message">* odaberi besplatno do 5 artikala iz posebne ponude</p> -->
                 </div>
-                <div class="col-10 col-sm-4 rounded mt-3 mt-sm-5  mb-5 m-1 box2 text-white p-4 small scale-up-right custom-shadow shadow p-3">
-                    <h3 class="text-center mb-4">POSEBNA PONUDA</h3>
-                    <p style="display: none;" id="message">* odaberi besplatno do 5 artikala iz posebne ponude</p>
-                    <form class="mb-3">
-                        <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" value="15" id="add1" name="add1">
-                                <label class="form-check-label" for="add1">               
-                                    Pinjata
-                                </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="15" id="add2" name="add2">
-                            <label class="form-check-label" for="add2">
-                                Pizza
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="15" id="add3" name="add3">
-                            <label class="form-check-label" for="add3">               
-                                Tema (Harry Potter, sport, zvijezde...)
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="5" id="add4" name="add4">
-                            <label class="form-check-label" for="add4">
-                                Šampanjac
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="5" id="add5" name="add5">
-                            <label class="form-check-label" for="add5">               
-                                Poklončići za ekipu 
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="15" id="add6" name="add6">
-                            <label class="form-check-label" for="add6">
-                                Torta
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="15" id="add7" name="add7">
-                            <label class="form-check-label" for="add7">               
-                                Face Painting
-                            </label>
-                        </div>
-                            <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="5" id="add8" name="add8">
-                            <label class="form-check-label" for="add8">               
-                                Fontana svjećica na torti
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="15" id="add9" name="add9">
-                            <label class="form-check-label" for="add9">               
-                                Korištenje jedne prostorije za roditelje
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="15" id="add10" name="add10">
-                            <label class="form-check-label" for="add10">               
-                                Pola sata više zabave
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="10" id="add11" name="add11">
-                            <label class="form-check-label" for="add11">               
-                                Pokrivka za tortu
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" value="5" id="add12" name="add12">
-                            <label class="form-check-label" for="add12">               
-                                2 isprintane fotke na foto papiru
-                            </label>
-                        </div>
-                        <div class="form-check mb-2 d-flex flex-column d-none" id="add13">
-                            <label class="label mb-3" for="quantity">               
-                                Dodatno djece:
-                            </label>
-                            <div class="number-input d-flex flex-row align-items-center">
-                                <button type="button" class="m-2" onclick="if (this.parentNode.querySelector('input[type=number]').value !== '0') {this.parentNode.querySelector('input[type=number]').stepDown(); adjustPrice('minus');}" ></button>
-                                <input class="quantity" min="0" name="quantity" value="0" type="number">
-                                <button type="button" class="m-2 plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); adjustPrice('plus');"></button>
-                            </div>
-                            </div>
-                    </form>
+                <div class="col-10 col-sm-5 col-lg-4 m-1">
+                    <h2 class="text-center package-title-addon">DODATNO</h2>
+                    <div class="rounded mb-5 box2 text-white p-4 small scale-up-right custom-shadow shadow p-3">
+                        <p style="display: none;" id="message"></p>
+                        <form class="mb-3" id="addons-form"></form>
+                    </div>
                 </div>
             </div>
         </div>
-    
+
         <div class="container">
-            <div class="text-center fs-4 fw-bold text-white shadow p-3">OSTALA DOGAĐANJA</div>
+            <div class="text-center p-3 rounded package-title other-events-title">OSTALA DOGAĐANJA</div>
             <div class="row">
-                <div class="col badge rounded-pill e1 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                <div
+                    class="col badge rounded-pill e1 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
                     Plesne radionice
                 </div>
-                <div class="col badge rounded-pill e2 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                <div
+                    class="col badge rounded-pill e2 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
                     Učimo zajedno (od 5€/45min)
                 </div>
-                <div class="col badge rounded-pill e3 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                <div
+                    class="col badge rounded-pill e3 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
                     Najam za proslave 50€
                 </div>
-                <div class="col badge rounded-pill e4 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                <div
+                    class="col badge rounded-pill e4 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
                     Rekreativna Joga
                 </div>
-                <div class="col badge rounded-pill e5 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
+                <div
+                    class="col badge rounded-pill e5 m-1 text-wrap fs-5 shadow p-3 d-flex align-items-center justify-content-center">
                     Radionice za potencijalno nadarenu djecu
                 </div>
             </div>
         </div>
-    </main>  
+    </main>
 
     <footer class="footercolor">
         <div class="container-sm text-center footercolor">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-white small">
+            <div class="row align-items-start">
+                <div class="col-lg-4 text-white small footer-main-col">
                     <h3 class="text-left mb-3">VILA TREŠNJICA</h3>
-                    <p class="mb-0 h5">DOBOJSKA ULICA 36c</p>
-                    <p class="h5 mb-3">10 000 ZAGREB</p>
-                    <a class="text-white fw-bold h5" href="tel:0917951845">091 795 1845</a></p>
+                    <p class="mb-0 h5">Lokacija 1: Dobojska ulica 36c</p>
+                    <p class="mb-0 h5">Lokacija 2: Ulica Otona Kučere 74</p>
+                    <p class="h5 mb-3">10 000 Zagreb</p>
+                    <a class="text-white fw-bold h5" href="tel:0917951845">091 795 1845</a>
+                    <div class="mt-3">
+                        <a href="https://www.instagram.com/vilatresnjica/" class="btn btn-social-icon btn-instagram">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                        <a href="https://www.facebook.com/vilatresnjicarodendani"
+                            class="btn btn-social-icon btn-facebook">
+                            <span class="fa fa-facebook"></span>
+                        </a>
+                        <a href="mailto: vilatresnjica@gmail.com" class="btn btn-social-icon btn-google">
+                            <span class="fa fa-envelope"></span>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 mt-3 mt-lg-0">
-                    <a href="https://www.instagram.com/vilatresnjica/" class="btn btn-social-icon btn-instagram">
-                        <span class="fa fa-instagram"></span>
-                    </a>
-                    <a href="https://www.facebook.com/vilatresnjicarodendani" class="btn btn-social-icon btn-facebook">
-                        <span class="fa fa-facebook"></span>
-                    </a>
-                    <a href="mailto: vilatresnjica@gmail.com" class="btn btn-social-icon btn-google">
-                        <span class="fa fa-envelope"></span>
-                    </a>
+                <!-- lokacija 1 = dobojska -->
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4 mt-4 mt-lg-0 text-white footer-map-col">
+                    <iframe class="rounded footer-map"
+                        src="https://maps.google.com/maps?q=Dobojska+ulica+36c,+Zagreb&t=k&z=18&output=embed"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="col-lg-4 p-10 mt-5 mt-lg-0">
-                    <iframe class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.6975600458272!2d15.950916651435621!3d45.79728651907369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d694ddf21ba7%3A0x34a91209464e1ab6!2sDobojska%20ul.%2036%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1673085408016!5m2!1shr!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- lokacija 2 = otona -->
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4 mt-4 mt-lg-0 text-white footer-map-col">
+                    <iframe class="rounded footer-map"
+                        src="https://maps.google.com/maps?q=Ulica+Otona+Kucere+74,+Zagreb&t=k&z=18&output=embed"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-              </div>
             </div>
         </div>
     </footer>
     <script src="./functions.js"></script>
 </body>
+
 </html>
-</button>

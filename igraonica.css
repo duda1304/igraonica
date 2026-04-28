@@ -1,13 +1,12 @@
 body {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
     min-height: 100vh;
     user-select: none;
+    font-family: "Mukta Vaani", "Segoe UI", sans-serif;
 }
 
 html {
-    background-color: black;
+    background-color: #F7CA36;
 }
 
 /* balon  */
@@ -25,8 +24,9 @@ html {
     animation: slide 1s 1 linear forwards;
     -webkit-animation: slide 1s 1 linear forwards;
     -moz-animation: slide 1s 1 linear forwards;
-    position: absolute;    
+    position: absolute;
 }
+
 .b1 {
     left: 60%;
     animation-duration: 10s;
@@ -37,6 +37,7 @@ html {
     -moz-animation-name: downTopAnimation, swing;
     opacity: 1;
 }
+
 .balloon:before {
     content: "▲";
     font-size: 20px;
@@ -49,6 +50,7 @@ html {
     z-index: -100;
     transition: opacity 1s ease-in-out;
 }
+
 .balloon:after {
     display: inline-block;
     top: 153px;
@@ -59,59 +61,104 @@ html {
     left: 0;
     margin: 0 auto;
     content: "";
-    background: linear-gradient(132deg, rgba(247,202,54,1) 0%, rgba(204,167,47,1) 67%);
+    background: linear-gradient(132deg, rgba(247, 202, 54, 1) 0%, rgba(204, 167, 47, 1) 67%);
 }
 
 @keyframes downTopAnimation {
     0% {
-      bottom: -150px;
+        bottom: -150px;
     }
+
     100% {
-      bottom: 100%;
+        bottom: 100%;
     }
 }
 
 @-moz-keyframes downTopAnimation {
     0% {
-      bottom: -150px;
+        bottom: -150px;
     }
+
     100% {
-      bottom: 100%;
+        bottom: 100%;
     }
 }
 
 @-webkit-keyframes downTopAnimation {
     0% {
-      bottom: -150px;
+        bottom: -150px;
     }
+
     100% {
-      bottom: 100%;
+        bottom: 100%;
     }
 }
 
-@keyframes swing { 
-   20% { transform: rotate(15deg); } 
-   40% { transform: rotate(-10deg); } 
-   60% { transform: rotate(5deg); } 
-   80% { transform: rotate(-5deg); } 
-   100% { transform: rotate(0deg); } 
-} 
+@keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
 
-@-moz-keyframes swing { 
-    20% { transform: rotate(15deg); } 
-    40% { transform: rotate(-10deg); } 
-    60% { transform: rotate(5deg); } 
-    80% { transform: rotate(-5deg); } 
-    100% { transform: rotate(0deg); } 
-} 
+    40% {
+        transform: rotate(-10deg);
+    }
 
-@-webkit-keyframes swing { 
-    20% { transform: rotate(15deg); } 
-    40% { transform: rotate(-10deg); } 
-    60% { transform: rotate(5deg); } 
-    80% { transform: rotate(-5deg); } 
-    100% { transform: rotate(0deg); } 
-} 
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 /* animacija vila tresnjica */
 .container1 {
@@ -123,110 +170,238 @@ html {
     justify-content: center;
     padding: 0.5rem;
 }
-   
+
 .header {
     margin: 0.25rem 0;
+    font-family: "Catamaran", sans-serif !important;
+    font-weight: 900 !important;
 }
-   
+
+.footercolor h3 {
+    font-family: "Catamaran", sans-serif !important;
+    font-weight: 900 !important;
+}
+
 .overflow-hidden {
     overflow: hidden;
 }
-   
+
 .drop-in {
     animation: drop-in 1s ease 200ms backwards;
     -webkit-animation: drop-in 1s ease 200ms backwards;
     -moz-animation: drop-in 1s ease 200ms backwards;
 }
-   
+
 .drop-in-2 {
     animation: drop-in 1200ms ease 500ms backwards;
     -webkit-animation: drop-in 1200ms ease 500ms backwards;
     -moz-animation: drop-in 1200ms ease 500ms backwards;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+    font-size: 1.1rem !important;
 }
-   
+
 @keyframes drop-in {
     from {
-     opacity: 0;
-     transform: translateY(-100px);
+        opacity: 0;
+        transform: translateY(-100px);
     }
+
     to {
-     opacity: 1;
-     transform: translate(0px);
+        opacity: 1;
+        transform: translate(0px);
     }
- }
+}
 
 @-moz-keyframes drop-in {
     from {
-     opacity: 0;
-     transform: translateY(-100px);
+        opacity: 0;
+        transform: translateY(-100px);
     }
+
     to {
-     opacity: 1;
-     transform: translate(0px);
+        opacity: 1;
+        transform: translate(0px);
     }
 }
 
 @-webkit-keyframes drop-in {
     from {
-     opacity: 0;
-     transform: translateY(-100px);
+        opacity: 0;
+        transform: translateY(-100px);
     }
+
     to {
-     opacity: 1;
-     transform: translate(0px);
+        opacity: 1;
+        transform: translate(0px);
     }
+}
+
+.location-switcher {
+    padding-top: 0.6rem;
+    background-color: #f6f6f6;
+    align-items: flex-start !important;
+}
+
+.location-switcher .btn-location {
+    margin-bottom: 0.5rem !important;
+}
+
+.btn-location {
+    border: 2px solid transparent;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.btn-location[data-location="dobojska"] {
+    background-color: #f6f6f6;
+    border-color: #349c34;
+    color: #349c34;
+}
+
+.btn-location[data-location="otona"] {
+    background-color: #f6f6f6;
+    border-color: #ffb600;
+    color: #ffb600;
+}
+
+.btn-location:hover,
+.btn-location:focus {
+    color: inherit;
+}
+
+.btn-location.active-location {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.btn-location[data-location="dobojska"].active-location {
+    background-color: #349c34;
+    border-color: #349c34;
+}
+
+.btn-location[data-location="otona"].active-location {
+    background-color: #ffb600;
+    border-color: #ffb600;
 }
 
 /* gumbi */
 .buttons-div {
-    margin-top: -10px;
+    margin-top: 0;
+    padding: 0.75rem 0 0.35rem;
+    background-color: #f6f6f6;
 }
 
 .custom-shadow {
-    box-shadow: 0 0 5px black !important;
+    box-shadow: none !important;
 }
 
 .btn1 {
     width: 30%;
     max-width: 150px;
     min-width: fit-content;
+    font-size: 1.05rem;
     /* margin-bottom: -20px; */
 }
 
-.button1 {
-    background-color:#3F84B9;
+#package-name {
+    font-size: 1.55rem;
 }
 
-.button1:hover, .button1:focus, .button1:active, .button1.active, .open>.dropdown-toggle.button1 {
-    color: #336a94;
-    background-color:#336a94;
+.box2 h3 {
+    font-size: 1.55rem;
+}
+
+.box2 .form-check-label {
+    font-size: 1.08rem;
+    line-height: 1.35;
+    text-transform: lowercase;
+}
+
+#package p {
+    font-size: 1.08rem;
+    line-height: 1.35;
+    text-transform: lowercase;
+    position: relative;
+    padding-left: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#package p::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1em;
+    line-height: 1.35;
+}
+
+#package p:last-child {
+    margin-bottom: 0;
+}
+
+.button1 {
+    background-color: #f6f6f6;
+    border: 2px solid #3F84B9;
+    color: #3F84B9 !important;
+    font-weight: 700;
+}
+
+.button1:hover,
+.button1:focus,
+.button1:active,
+.button1.active,
+.open>.dropdown-toggle.button1 {
+    color: #3F84B9;
+    background-color: #ebebeb;
 }
 
 .button2 {
-    background-color: #494AA3;
+    background-color: #f6f6f6;
+    border: 2px solid #494AA3;
+    color: #494AA3 !important;
+    font-weight: 700;
 }
 
-.button2:hover, .button2:focus, .button2:active, .button2.active, .open>.dropdown-toggle.button2 {
-    color: #3b3c84;
-    background-color:#3d3e84;
+.button2:hover,
+.button2:focus,
+.button2:active,
+.button2.active,
+.open>.dropdown-toggle.button2 {
+    color: #494AA3;
+    background-color: #ebebeb;
 }
 
 .button3 {
-    background-color: #8FDB83;
+    background-color: #f6f6f6;
+    border: 2px solid #8FDB83;
+    color: #8FDB83 !important;
+    font-weight: 700;
 }
 
-.button3:hover, .button3:focus, .button3:active, .button3.active, .open>.dropdown-toggle.button3 {
-    color: #79bc6f;
-    background-color:#79bc6f;
+.button3:hover,
+.button3:focus,
+.button3:active,
+.button3.active,
+.open>.dropdown-toggle.button3 {
+    color: #8FDB83;
+    background-color: #ebebeb;
 }
 
 .button4 {
-    background-color: #bb99ff;
+    background-color: #f6f6f6;
+    border: 2px solid #bb99ff;
+    color: #bb99ff !important;
+    font-weight: 700;
 }
 
-.button4:hover, .button4:focus, .button4:active, .button4.active, .open>.dropdown-toggle.button4 {
-    color: #9966ff;
-    background-color:#9966ff;
+.button4:hover,
+.button4:focus,
+.button4:active,
+.button4.active,
+.open>.dropdown-toggle.button4 {
+    color: #bb99ff;
+    background-color: #ebebeb;
 }
 
 
@@ -238,109 +413,142 @@ html {
     background-color: #FF6190;
 }
 
+@media (min-width: 576px) {
+    .colorLiberty .row.justify-content-center>[class*="col-"] {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .colorLiberty .row.justify-content-center>[class*="col-"]>.box1,
+    .colorLiberty .row.justify-content-center>[class*="col-"]>.box2 {
+        flex: 1 1 auto;
+    }
+}
+
 .row {
     padding: 1rem;
 }
 
 /* background colors */
 .colorLiberty {
-    background-color: #F7CA36;
+    background-color: #f6f6f6;
 }
 
 .footercolor {
     background-color: #494AA3;
 }
 
+.footer-map {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    border: 0;
+}
+
+.footer-main-col .btn-social-icon {
+    margin-right: 0.35rem;
+}
+
+@media (min-width: 992px) {
+    .footer-map-col {
+        padding-top: 0.35rem;
+    }
+
+    .footer-map {
+        height: 210px;
+    }
+}
+
 .bg-image {
     background-repeat: none;
     background-size: cover;
-}
-
-.footercolor .small p{
-    text-transform: lowercase;
-}
-
-.footercolor .small p::first-letter{
-    text-transform: capitalize;
+    background-position: center 60%;
+    height: 32.5vh;
 }
 
 /* animacija na mainu  */
 
 .scale-up-left {
-	animation: scale-up-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     -webkit-animation: scale-up-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     -moz-animation: scale-up-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @keyframes scale-up-left {
     0% {
-      transform: scale(0.5);
-      transform-origin: 0% 50%;
+        transform: scale(0.5);
+        transform-origin: 0% 50%;
     }
+
     100% {
-      transform: scale(1);
-      transform-origin: 0% 50%;
+        transform: scale(1);
+        transform-origin: 0% 50%;
     }
-  }
+}
 
 @-moz-keyframes scale-up-left {
     0% {
-      transform: scale(0.5);
-      transform-origin: 0% 50%;
+        transform: scale(0.5);
+        transform-origin: 0% 50%;
     }
+
     100% {
-      transform: scale(1);
-      transform-origin: 0% 50%;
+        transform: scale(1);
+        transform-origin: 0% 50%;
     }
 }
 
 @-webkit-keyframes scale-up-left {
     0% {
-      transform: scale(0.5);
-      transform-origin: 0% 50%;
+        transform: scale(0.5);
+        transform-origin: 0% 50%;
     }
+
     100% {
-      transform: scale(1);
-      transform-origin: 0% 50%;
+        transform: scale(1);
+        transform-origin: 0% 50%;
     }
 }
 
 .scale-up-right {
-	animation: scale-up-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     -webkit-animation: scale-up-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     -moz-animation: scale-up-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @keyframes scale-up-right {
     0% {
-      transform: scale(0.5);
-      transform-origin: 100% 50%;
+        transform: scale(0.5);
+        transform-origin: 100% 50%;
     }
+
     100% {
-      transform: scale(1);
-      transform-origin: 100% 50%;
+        transform: scale(1);
+        transform-origin: 100% 50%;
     }
 }
 
 @-moz-keyframes scale-up-right {
     0% {
-      transform: scale(0.5);
-      transform-origin: 100% 50%;
+        transform: scale(0.5);
+        transform-origin: 100% 50%;
     }
+
     100% {
-      transform: scale(1);
-      transform-origin: 100% 50%;
+        transform: scale(1);
+        transform-origin: 100% 50%;
     }
 }
 
 @-webkit-keyframes scale-up-right {
     0% {
-      transform: scale(0.5);
-      transform-origin: 100% 50%;
+        transform: scale(0.5);
+        transform-origin: 100% 50%;
     }
+
     100% {
-      transform: scale(1);
-      transform-origin: 100% 50%;
+        transform: scale(1);
+        transform-origin: 100% 50%;
     }
 }
 
@@ -353,6 +561,7 @@ html {
         font-size: 100%;
         font-weight: normal;
     }
+
     to {
         font-size: 105%;
         font-weight: bolder;
@@ -363,27 +572,86 @@ html {
     font-weight: 600;
 }
 
+.button1.bold {
+    background-color: #3F84B9;
+    border-color: #3F84B9;
+    color: #ffffff !important;
+}
+
+.button2.bold {
+    background-color: #494AA3;
+    border-color: #494AA3;
+    color: #ffffff !important;
+}
+
+.button3.bold {
+    background-color: #8FDB83;
+    border-color: #8FDB83;
+    color: #ffffff !important;
+}
+
+.button4.bold {
+    background-color: #bb99ff;
+    border-color: #bb99ff;
+    color: #ffffff !important;
+}
+
+.btn1 {
+    border-radius: 8px;
+}
+
+.btn1:not(.bold) {
+    box-shadow: none !important;
+}
+
+.package-title {
+    font-family: "Mukta Vaani", "Segoe UI", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.package-title-addon {
+    font-family: "Mukta Vaani", "Segoe UI", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: #FF6190;
+}
+
+.other-events-title {
+    background-color: #F7CA36;
+    color: #ffffff;
+}
+
 /* pozadinske boje dodatno Vila tresnjica */
 
 .e1 {
     background-color: #336a94;
 }
+
 .e2 {
-    background-color:#FF6190
+    background-color: #FF6190
 }
+
 .e3 {
-    background-color:#349c34
+    background-color: #349c34
 }
+
 .e4 {
-    background-color:#3d3e84
+    background-color: #3d3e84
 }
+
 .e5 {
-    background-color:#c4a02b
+    background-color: #c4a02b
 }
 
 
 /* overwrite default css rules */
-.form-check-input:disabled~.form-check-label, .form-check-input[disabled]~.form-check-label {
+.form-check-input:disabled~.form-check-label,
+.form-check-input[disabled]~.form-check-label {
     /* cursor: default; */
     opacity: 1 !important;
 }
@@ -395,25 +663,26 @@ input[type="number"] {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     appearance: textfield;
-  }
-  
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
-  }
-  
-  .number-input {
+}
+
+.number-input {
     border: 0;
-    display: inline-flex;
-  }
-  
-  .number-input,
-  .number-input * {
+    display: flex;
+    justify-content: center;
+}
+
+.number-input,
+.number-input * {
     box-sizing: border-box;
-  }
-  
-  .number-input button {
-    outline:none;
+}
+
+.number-input button {
+    outline: none;
     appearance: none;
     -webkit-appearance: none;
     background-color: transparent;
@@ -426,11 +695,11 @@ input[type="number"] {
     margin: 0;
     position: relative;
     box-shadow: 0px 0px 1px #474747;
-      border-radius: 50%;
-  }
-  
-  .number-input button:before,
-  .number-input button:after {
+    border-radius: 50%;
+}
+
+.number-input button:before,
+.number-input button:after {
     display: inline-block;
     position: absolute;
     content: '';
@@ -438,12 +707,13 @@ input[type="number"] {
     height: 2px;
     background-color: #212121;
     transform: translate(-50%, -50%);
-  }
-  .number-input button.plus:after {
+}
+
+.number-input button.plus:after {
     transform: translate(-50%, -50%) rotate(90deg);
-  }
-  
-  .number-input input[type=number] {
+}
+
+.number-input input[type=number] {
     font-family: sans-serif;
     max-width: 4rem;
     padding: .5rem;
@@ -453,10 +723,85 @@ input[type="number"] {
     height: 3rem;
     font-weight: bold;
     text-align: center;
-    color:#9be3df;
-  }
-  
-  
-  
-  
-  
+    color: #bb99ff;
+}
+
+#extra-kids-block {
+    text-align: center;
+}
+
+#extra-kids-block .label {
+    font-size: 1.08rem;
+    text-transform: lowercase;
+}
+
+.extra-kids-divider {
+    border: none;
+    border-top: 4px solid white;
+    margin-bottom: 1rem;
+}
+
+.child-plus,
+.child-minus {
+    background-color: #bb99ff !important;
+}
+
+.child-plus:before,
+.child-plus:after,
+.child-minus:before,
+.child-minus:after {
+    background-color: #ffffff !important;
+}
+
+@media (max-width: 575.98px) {
+    .bg-image {
+        height: 19.5vh !important;
+    }
+
+    .container1 {
+        height: 100%;
+    }
+
+    .container1 .drop-in-2 {
+        font-size: 0.85rem !important;
+    }
+
+    .btn1 {
+        font-size: 0.8rem !important;
+        width: calc(50% - 0.5rem) !important;
+        max-width: none;
+        min-width: 0;
+        margin: 0.25rem !important;
+    }
+
+    #package-name,
+    .box2 h3 {
+        font-size: 1.15rem !important;
+    }
+
+    #package p,
+    .box2 .form-check-label {
+        font-size: 0.9rem !important;
+    }
+
+    .location-switcher .btn-location {
+        font-size: 0.78rem;
+        padding: 0.3rem 0.45rem;
+    }
+
+    main .container-lg.pt-2 {
+        padding-top: 0 !important;
+    }
+
+    .colorLiberty .row.justify-content-center {
+        padding-top: 0.35rem;
+    }
+
+    .colorLiberty .kolona {
+        margin-top: 1rem !important;
+    }
+
+    .colorLiberty .row.justify-content-center>.box2 {
+        margin-top: 1rem !important;
+    }
+}
