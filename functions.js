@@ -336,9 +336,11 @@
 
         let price = data.prices[activePackage];
         const isFreeItemPackage = special.freeItemsPackage === activePackage;
+        const includedIds = special.packageDefaults[activePackage] || [];
 
         if (!isFreeItemPackage) {
             document.querySelectorAll('#addons-form input.form-check-input:checked').forEach((input) => {
+                if (includedIds.includes(input.id)) return;
                 price += parseInt(input.value, 10);
             });
         }
@@ -349,6 +351,9 @@
 
         const priceEl = document.getElementById('price');
         if (priceEl) priceEl.textContent = `${price}€`;
+
+        // const anchorEl = document.getElementById('anchor-price');
+        // if (anchorEl) anchorEl.textContent = `(cijena 10.9.2026. ${price}€)`;
     }
 
     function updateAllUI() {
