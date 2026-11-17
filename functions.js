@@ -352,8 +352,8 @@
         const priceEl = document.getElementById('price');
         if (priceEl) priceEl.textContent = `${price}€`;
 
-        // const anchorEl = document.getElementById('anchor-price');
-        // if (anchorEl) anchorEl.textContent = `(cijena 10.9.2026. ${price}€)`;
+        const anchorEl = document.getElementById('anchor-price');
+        if (anchorEl) anchorEl.textContent = `(cijena 10.9.2026. ${price}€)`;
     }
 
     function updateAllUI() {
